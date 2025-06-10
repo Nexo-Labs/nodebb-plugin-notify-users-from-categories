@@ -13,6 +13,14 @@
 					</select>
 				</div>
 				<div class="mb-3">
+					<label class="form-label" for="notification-trigger">Qué actividad notificar</label>
+					<select id="notification-trigger" name="notification-trigger" class="form-select">
+						<option value="topics-only">Solo nuevos temas</option>
+						<option value="both">Temas y respuestas</option>
+					</select>
+					<p class="form-text">Selecciona qué tipo de actividad debe generar notificaciones</p>
+				</div>
+				<div class="mb-3">
 					<label class="form-label" for="groups-to-notify">Groups to notify</label>
 					<select id="groups-to-notify" name="groups-to-notify" class="form-select" multiple size="8">
 						{{{ each groups }}}
