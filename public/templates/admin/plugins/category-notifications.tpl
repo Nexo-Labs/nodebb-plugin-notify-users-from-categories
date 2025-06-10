@@ -1,4 +1,3 @@
-
 <div class="acp-page-container">
 	<!-- IMPORT admin/partials/settings/header.tpl -->
 
@@ -15,11 +14,21 @@
 				</div>
 				<div class="mb-3">
 					<label class="form-label" for="groups-to-notify">Groups to notify</label>
-					<input type="text" id="groups-to-notify" name="groups-to-notify" title="Groups to notify" class="form-control" placeholder="Groups to notify">
+					<select id="groups-to-notify" name="groups-to-notify" class="form-select" multiple size="8">
+						{{{ each groups }}}
+						<option value="{./displayName}">{./displayName}</option>
+						{{{ end }}}
+					</select>
+					<p class="form-text">Selecciona los grupos que deben recibir notificaciones</p>
 				</div>
 				<div class="mb-3">
 					<label class="form-label" for="categories-to-notify">Categories to notify</label>
-					<input type="text" id="categories-to-notify" name="categories-to-notify" title="Categories to notify" class="form-control" placeholder="Categories to notify">
+					<select id="categories-to-notify" name="categories-to-notify" class="form-select" multiple size="8">
+						{{{ each categories }}}
+						<option value="{./cid}" data-name="{./name}">{./level}{./name}</option>
+						{{{ end }}}
+					</select>
+					<p class="form-text">Selecciona las categorías que activarán las notificaciones</p>
 				</div>
 			</form>
 		</div>
