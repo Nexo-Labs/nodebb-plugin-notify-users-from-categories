@@ -1,17 +1,11 @@
-# Quickstart Plugin for NodeBB
+# Category Notifications
 
-A starter kit for quickly creating NodeBB plugins. Comes with a pre-setup SCSS file, server side JS script with an `static:app.load` hook, and a client-side script. Most plugins need at least one of the above, so this ought to save you some time. For a full list of hooks have a look at our [wiki page](https://github.com/NodeBB/NodeBB/wiki/Hooks), and for more information about creating plugins please visit our [documentation portal](https://docs.nodebb.org/).
+This plugin allows users to subscribe to categories and get notifications whenever a new topic or post is made.
 
-Fork this or copy it, and using your favourite text editor find and replace all instances of `nodebb-plugin-quickstart` with `nodebb-plugin-your-plugins-name`. Change the author's name in the LICENSE and package.json files.
-
-## Hello World
-
-Really simple, just edit `public/lib/main.js` and paste in `console.log('hello world');`, and that's it!
+In the administrative settings, you can choose how users are notified: Notification (via header dropdown), Email, or both.
 
 ## Installation
 
-    npm install nodebb-plugin-quickstart
+1. Install this plugin via the ACP page of your NodeBB installation.
+1. Activate and reload your NodeBB
 
-## Screenshots
-
-Don't forget to add screenshots!

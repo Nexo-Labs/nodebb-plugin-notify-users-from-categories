@@ -1,27 +1,19 @@
 {
-	"id": "nodebb-plugin-notify-users-from-categories",
-	"url": "https://github.com/Nexo-Labs/nodebb-plugin-notify-users-from-categories",
-	"library": "./library.js",
-	"hooks": [
-		{ "hook": "static:app.load", "method": "init" },
-		{ "hook": "static:api.routes", "method": "addRoutes" },
-		{ "hook": "filter:admin.header.build", "method": "addAdminNavigation" }
+    "library": "./index.js",
+    "hooks": [
+        { "hook": "static:app.load", "method": "init"},
+        { "hook": "filter:admin.header.build", "method": "adminMenu"},
+        { "hook": "action:topic.post", "method": "onTopicPost"},
+        { "hook": "action:topic.reply", "method": "onTopicReply"},
+        { "hook": "action.user.delete", "method": "onUserDelete"}
+    ],
+    "scripts": [
+		"public/scripts/client.js"
 	],
-	"staticDirs": {
-		"static": "./static"
-	},
-	"scss": [
-		"scss/quickstart.scss"
-	],
-	"scripts": [
-		"public/lib/main.js"
-	],
-	"acpScripts": [
-		"public/lib/acp-main.js"
-	],
-	"modules": {
-		"../client/quickstart.js": "./public/lib/quickstart.js",
-		"../admin/plugins/quickstart.js": "./public/lib/admin.js"
-	},
-	"templates": "templates"
+    "modules": {
+        "../admin/plugins/category-notifications.js": "public/scripts/admin.js"
+    },
+    "templates": "./public/templates",
+    "languages": "languages",
+    "defaultLang": "en-GB"
 }

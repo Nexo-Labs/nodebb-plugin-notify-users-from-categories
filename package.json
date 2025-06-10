@@ -1,47 +1,32 @@
 {
   "name": "@nexo-labs/nodebb-plugin-notify-users-from-categories",
-  "version": "0.4.3",
-  "description": "A starter kit for quickly creating NodeBB plugins",
-  "main": "library.js",
+  "version": "4.1.0",
+  "description": "Category notifications",
+  "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Nexo-Labs/nodebb-plugin-notify-users-from-categories"
-  },
-  "publishConfig": {
-    "access": "public"
+    "url": "https://github.com/NodeBB/nodebb-plugin-category-notifications"
   },
   "scripts": {
-    "lint": "eslint ."
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "nodebb",
     "plugin",
-    "quickstart",
-    "shell"
+    "notification",
+    "category"
   ],
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
-  "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "git add"
-    ]
-  },
+  "author": "Baris Usakli <baris@nodebb.org>",
   "license": "MIT",
-  "readmeFilename": "README.md",
-  "nbbpm": {
-    "compatibility": "^3.2.0"
+  "dependencies": {
+    "async": "3.2.3"
   },
   "devDependencies": {
-    "@commitlint/cli": "19.8.1",
-    "@commitlint/config-angular": "19.8.1",
-    "eslint": "9.28.0",
-    "eslint-config-nodebb": "1.1.7",
-    "husky": "9.1.7",
-    "lint-staged": "16.1.0"
+    "eslint": "8.10.0",
+    "eslint-config-nodebb": "0.1.1",
+    "eslint-plugin-import": "2.25.4"
+  },
+  "nbbpm": {
+    "compatibility": "^3.2.0"
   }
 }
