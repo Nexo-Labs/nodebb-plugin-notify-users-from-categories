@@ -4,7 +4,7 @@
 	<div class="row m-0">
 		<div id="spy-container" class="col-12  px-0 mb-4" tabindex="0">
 			<form class="form category-notifications-settings">
-				<div class="">
+				<div class="mb-3">
 					<label class="form-label" for="notificationSetting">Notification Setting</label>
 					<select id="notificationSetting" name="type" class="form-select" >
 						<option value="email">Send Email Only</option>
