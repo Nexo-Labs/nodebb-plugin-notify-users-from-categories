@@ -7,9 +7,6 @@
         { "hook": "action:topic.reply", "method": "onTopicReply"},
         { "hook": "action.user.delete", "method": "onUserDelete"}
     ],
-    "scripts": [
-		"public/scripts/client.js"
-	],
     "modules": {
         "../admin/plugins/category-notifications.js": "public/scripts/admin.js"
     },
